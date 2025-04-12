@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Game Showcase</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background: #111;
-      color: #fff;
-    }
-    img {
-      margin-top: 20px;
-      max-width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.2);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Screenshots Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>My Car Game</h1>
-  <p>Here’s a screenshot of the game I’m working on!</p>
-  <img src="image9.jpg" alt="Car Game Screenshot" />
+    <h1>Demo Screenshots</h1>
+    <div class="gallery">
+        <!-- Replace 'screenshot1.jpg' with your actual image paths -->
+        <div class="gallery-item">
+            <img src="image1.jpg" alt="Demo Screenshot 1">
+            <div class="caption">Screenshot 1 Description</div>
+        </div>
+        <div class="gallery-item">
+            <img src="image2.jpg" alt="Demo Screenshot 2">
+            <div class="caption">Screenshot 2 Description</div>
+        </div>
+        <div class="gallery-item">
+            <img src="image3.jpg" alt="Demo Screenshot 3">
+            <div class="caption">Screenshot 3 Description</div>
+        </div>
+        <div class="gallery-item">
+            <img src="image4.jpg" alt="Demo Screenshot 4">
+            <div class="caption">Screenshot 4 Description</div>
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
 </body>
 </html>
